@@ -1,7 +1,6 @@
 <template>
   <div class="layout-padding row justify-center">
     <div style="width: 500px; max-width: 90vw;">
-
       <q-input v-model="gold_conf.worst" type="number" float-label="Worst" />
       <q-input v-model="gold_conf.atr" type="number" float-label="ATR" />
       <q-radio v-model="gold_conf.oper" val="buy" label="Buy" />
@@ -64,19 +63,7 @@
 
 <script>
   import axios from 'axios'
-  import {
-    QBtn,
-    QInput,
-    QRadio
-  } from 'quasar'
   export default {
-    props: [],
-    components: {
-      QBtn,
-      QInput,
-      QRadio
-    },
-    computed: {},
     data: function() {
       return {
         type: 'gold',
