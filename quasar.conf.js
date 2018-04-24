@@ -38,9 +38,15 @@ module.exports = function (ctx) {
       }
     },
     devServer: {
+      proxy: {
+        '/api_': {
+          target: 'http://127.0.0.1:8080',
+          changeOrigin: true
+        }
+      }
       // https: true,
       // port: 8080,
-      open: true // opens browser window automatically
+      // open: true // opens browser window automatically
     },
     // framework: 'all' --- includes everything; for dev only!
     framework: {
